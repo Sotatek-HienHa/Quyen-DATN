@@ -1,0 +1,22 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\begin{center}
+    \Large{\textbf{TÓM TẮT NỘI DUNG ĐỒ ÁN}}\\
+\end{center}
+\vspace{1cm}
+Việc giám sát và quản lý vị trí các đối tượng, phương tiện ngày càng trở nên quan trọng trong nhiều lĩnh vực như vận tải, logistic, và an ninh. Tuy nhiên, các giải pháp truyền thống thường chỉ cung cấp thông tin vị trí tức thời, thiếu khả năng phân tích lịch sử di chuyển, cảnh báo khi vượt ra khỏi khu vực cho phép (geofence), và khó tích hợp các thông số hệ thống quan trọng như điện áp, trạng thái kết nối vào trong một nền tảng chung. Một số hướng tiếp cận phổ biến hiện nay bao gồm sử dụng thiết bị định vị GPS đơn giản, hệ thống quản lý dựa trên mạng di động GSM, hoặc các nền tảng IoT để quản lý và phân tích dữ liệu vị trí. Các giải pháp này dù hiệu quả nhưng thường bị giới hạn trong khả năng mở rộng, tích hợp, và quản lý dữ liệu tập trung.
+
+Trong đồ án này, tôi lựa chọn tiếp cận theo hướng phát triển phần mềm cho thiết bị nhúng NaviTracker với nền tảng IoT ThingsBoard. Tôi lựa chọn giải pháp này do khả năng linh hoạt cao, dễ dàng tích hợp nhiều loại dữ liệu và hỗ trợ các tính năng quản lý nâng cao như geofence, theo dõi lịch sử di chuyển, và giám sát các thông số hệ thống.
+
+Giải pháp của tôi bao gồm phát triển một phần mềm nhúng trên NaviTracker có khả năng thu thập liên tục tọa độ GPS, tính toán quãng đường di chuyển, và gửi dữ liệu vị trí cùng các thông số hệ thống (như trạng thái pin, chất lượng tín hiệu GPS) tới server ThingsBoard thông qua giao thức MQTT. Trên ThingsBoard, tôi xây dựng dashboard trực quan hiển thị thông tin vị trí hiện tại, tổng hợp quãng đường đã đi, lịch sử hành trình chi tiết, quản lý geofence linh hoạt và cảnh báo khi thiết bị ra vào các khu vực được định nghĩa trước.
+
+Đóng góp chính của đồ án là xây dựng một hệ thống hoàn chỉnh và tích hợp sâu giữa thiết bị nhúng NaviTracker và nền tảng ThingsBoard, cung cấp đầy đủ các tính năng giám sát và quản lý vị trí. Kết quả đạt được sau cùng là hệ thống hoạt động ổn định, trực quan và đáp ứng tốt các yêu cầu thực tế về quản lý và giám sát đối tượng di chuyển, đã được thử nghiệm thực tế và cho kết quả chính xác, đáng tin cậy.
+\begin{flushright}
+Sinh viên thực hiện\\
+\begin{tabular}{@{}c@{}}
+\textit{(Ký và ghi rõ họ tên)}
+\end{tabular}
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+Chương này trình bày các công nghệ, nền tảng và giao thức được sử dụng trong quá trình xây dựng hệ thống giám sát vị trí cho thiết bị nhúng NaviTracker. Việc lựa chọn công nghệ được thực hiện dựa trên yêu cầu chức năng và phi chức năng đã phân tích ở Chương 2, đảm bảo khả năng thu thập dữ liệu định vị GNSS, truyền thông ổn định tới nền tảng giám sát từ xa, và hiển thị thông tin một cách trực quan, linh hoạt.
+
+Cụ thể, chương sẽ giới thiệu về nền tảng phần cứng của thiết bị NaviTracker, các giao thức truyền thông được tích hợp để đảm bảo trao đổi dữ liệu hiệu quả, và nền tảng ThingsBoard được sử dụng làm hệ thống hiển thị thông tin. Mỗi công nghệ được phân tích về nguyên lý hoạt động, lý do lựa chọn và vai trò của nó trong hệ thống tổng thể. Đồng thời, chương cũng sẽ so sánh một số lựa chọn thay thế có thể, qua đó làm rõ sự phù hợp của các công nghệ được sử dụng trong đồ án.
+\section{Thiết bị NaviTracker}
+\label{section:3.1}
+Thiết bị NaviTracker là một nền tảng phần cứng nhúng được thiết kế chuyên dụng cho mục đích theo dõi vị trí trong thời gian thực. Thiết bị tích hợp các thành phần chính như vi điều khiển trung tâm SC20, mô-đun GNSS để thu thập dữ liệu định vị toàn cầu, và mô-đun truyền thông không dây để gửi dữ liệu đến hệ thống giám sát từ xa. Ngoài ra, thiết bị còn có bộ nhớ trong để lưu trữ tạm thời các dữ liệu trong trường hợp mất kết nối mạng.
+
+Vi điều khiển trung tâm đóng vai trò điều phối toàn bộ hoạt động của thiết bị, bao gồm thu nhận dữ liệu GNSS, định dạng thông tin theo giao thức truyền thông phù hợp, và thực hiện các tác vụ xử lý cục bộ như tính toán quãng đường, phát hiện trạng thái di chuyển hoặc ngừng. Mô-đun GNSS được sử dụng có khả năng thu thập dữ liệu với độ chính xác cao và hỗ trợ các chuẩn bản tin phổ biến như NMEA hoặc UBX, giúp dễ dàng trích xuất thông tin vị trí hiện tại.
+
+Thiết bị NaviTracker được lựa chọn nhằm đáp ứng yêu cầu theo dõi vị trí liên tục trong môi trường thực tế, nơi các yếu tố như độ ổn định kết nối, mức tiêu thụ năng lượng và kích thước vật lý đều đóng vai trò quan trọng. So với một số lựa chọn thay thế như sử dụng bo mạch phát triển chung (Arduino, Raspberry Pi), NaviTracker mang lại ưu thế về độ ổn định phần cứng, khả năng tích hợp truyền thông di động và thiết kế nhỏ gọn, phù hợp với các ứng dụng IoT triển khai thực tế ngoài hiện trường.
+
+Việc sử dụng thiết bị này góp phần đảm bảo tính liên tục trong việc thu thập và truyền dữ liệu định vị, phục vụ hiệu quả cho các chức năng giám sát vị trí và phân tích hành trình được trình bày tại Chương 2.
+\section{Ngôn ngữ và môi trường phát triển}
+\label{section:3.2}
+Ứng dụng được phát triển cho thiết bị NaviTracker sử dụng hệ điều hành Android, với ngôn ngữ lập trình chính là Java. Đây là một lựa chọn phổ biến trong phát triển phần mềm di động và thiết bị nhúng chạy Android, nhờ vào hệ sinh thái phong phú, tính ổn định cao và khả năng truy cập trực tiếp các API phần cứng thông qua Android SDK.
+
+Việc lựa chọn Android làm nền tảng phát triển xuất phát từ yêu cầu về khả năng xử lý linh hoạt, dễ dàng tương tác với mô-đun GNSS qua giao tiếp UART, và khả năng tích hợp các thư viện hỗ trợ giao thức MQTT để truyền dữ liệu lên hệ thống giám sát ThingsBoard. Môi trường phát triển sử dụng là Android Studio – một công cụ tích hợp hiện đại do Google phát triển, hỗ trợ đầy đủ cho việc lập trình, biên dịch, mô phỏng và gỡ lỗi ứng dụng Android.
+
+So với các ngôn ngữ khác như C/C++ vốn thường dùng trong các hệ thống vi điều khiển truyền thống, Java trên Android mang lại lợi thế rõ rệt về tính mô-đun, khả năng mở rộng và dễ bảo trì mã nguồn. Đồng thời, hệ điều hành Android cho phép triển khai đồng thời nhiều tác vụ, như thu thập dữ liệu GNSS, lưu trữ cục bộ và truyền tải qua mạng, một cách hiệu quả nhờ vào cơ chế quản lý tiến trình và luồng xử lý riêng biệt.
+
+Việc sử dụng Java và Android giúp rút ngắn thời gian phát triển, đồng thời đáp ứng linh hoạt các yêu cầu được phân tích trong Chương 2, đặc biệt là khả năng truyền dữ liệu định vị lên server và tương tác theo thời gian thực với các thành phần của hệ thống giám sát từ xa.
+\section{Giao thức truyền thông MQTT}
+\label{section:3.3}
+MQTT (Message Queuing Telemetry Transport) là một giao thức truyền thông nhẹ, được thiết kế tối ưu cho các thiết bị có tài nguyên hạn chế và hoạt động trong môi trường mạng không ổn định. Trong đồ án này, MQTT được sử dụng để truyền dữ liệu định vị và trạng thái hệ thống từ thiết bị NaviTracker lên nền tảng ThingsBoard theo thời gian thực.
+
+Giao thức MQTT hoạt động theo mô hình publish/subscribe, trong đó thiết bị đóng vai trò publisher, gửi dữ liệu lên một máy chủ trung gian gọi là broker. ThingsBoard tích hợp sẵn MQTT broker, cho phép thiết bị đăng dữ liệu telemetry và thuộc tính thiết bị, cũng như nhận cấu hình hoặc lệnh điều khiển từ server thông qua các bản tin có cấu trúc. Việc sử dụng mô hình này giúp giảm độ trễ và tiết kiệm băng thông, đồng thời hỗ trợ mở rộng hệ thống một cách linh hoạt.
+
+MQTT được lựa chọn vì phù hợp với yêu cầu truyền dữ liệu theo thời gian thực đã nêu trong Chương 2, đặc biệt trong bối cảnh thiết bị có thể hoạt động ở những khu vực có chất lượng mạng không ổn định. So với các giao thức khác như HTTP hay CoAP, MQTT có độ trễ thấp hơn và mức tiêu thụ tài nguyên thấp hơn đáng kể. Đồng thời, giao thức này hỗ trợ duy trì kết nối liên tục và có khả năng gửi lại bản tin nếu kết nối bị gián đoạn, giúp đảm bảo độ tin cậy của hệ thống giám sát.
+
+Việc tích hợp MQTT trên nền Android được thực hiện thông qua thư viện mã nguồn mở Eclipse Paho. Thư viện này cung cấp giao diện lập trình đơn giản, dễ tích hợp với các tiến trình thu thập và xử lý dữ liệu GNSS, đảm bảo cho quá trình truyền thông được diễn ra liên tục và ổn định. Qua đó, MQTT đóng vai trò là cầu nối chính giữa thiết bị và nền tảng ThingsBoard, góp phần hiện thực hóa các chức năng giám sát, cảnh báo và tương tác từ xa trong hệ thống.
+\section{Nền tảng hiển thị: ThingsBoard}
+\label{section:3.4}
+ThingsBoard là một nền tảng mã nguồn mở hỗ trợ quản lý thiết bị IoT, thu thập dữ liệu từ xa, và hiển thị trực quan thông tin thông qua các dashboard cấu hình động. Trong đồ án này, ThingsBoard đóng vai trò là hệ thống giám sát trung tâm, tiếp nhận dữ liệu từ thiết bị NaviTracker thông qua giao thức MQTT, xử lý dữ liệu và cung cấp giao diện tương tác cho người dùng.
+
+Nền tảng ThingsBoard cung cấp các thành phần chức năng chính bao gồm quản lý thiết bị (device management), lưu trữ dữ liệu thời gian thực (telemetry storage), tạo cảnh báo (rule engine) và hiển thị dữ liệu (dashboard visualization). Việc cấu hình và vận hành được thực hiện thông qua giao diện web trực quan, giúp rút ngắn thời gian triển khai hệ thống giám sát.
+
+So với các nền tảng giám sát khác như Blynk, Node-RED hoặc Grafana, ThingsBoard có ưu điểm vượt trội về khả năng tích hợp sâu với các giao thức IoT tiêu chuẩn như MQTT, CoAP, HTTP, đồng thời hỗ trợ tạo lập các quy tắc xử lý logic ngay tại server thông qua rule chain. Điều này cho phép hệ thống phản ứng linh hoạt với các sự kiện như thiết bị vượt quá ranh giới địa lý (geofence), mất tín hiệu định vị, hoặc ngắt kết nối mạng.
+
+Việc lựa chọn ThingsBoard nhằm đáp ứng trực tiếp các yêu cầu đã phân tích trong Chương 2 như: hiển thị tọa độ hiện tại, ghi lại lịch sử di chuyển, tính toán quãng đường di chuyển, thiết lập vùng geofence và gửi cảnh báo. Nhờ khả năng cấu hình linh hoạt và khả năng mở rộng, nền tảng này phù hợp để triển khai cả trong môi trường thử nghiệm lẫn ứng dụng thực tế ngoài hiện trường.
+\section{Các thư viện và phần mềm hỗ trợ}
+\label{section:3.5}
+Trong quá trình phát triển ứng dụng giám sát vị trí cho thiết bị NaviTracker, một số thư viện và phần mềm hỗ trợ đã được sử dụng nhằm đơn giản hóa việc lập trình, nâng cao độ ổn định của hệ thống, và rút ngắn thời gian triển khai. Các thành phần này chủ yếu phục vụ cho các chức năng thu thập dữ liệu GNSS, xử lý bản tin, truyền thông qua giao thức MQTT, và hiển thị thông tin tại nền tảng ThingsBoard.
+
+Trên phía thiết bị, thư viện Eclipse Paho MQTT Client được sử dụng để hiện thực kết nối MQTT trong môi trường Android. Thư viện này hỗ trợ đầy đủ các chức năng publish/subscribe, quản lý kết nối, và xử lý sự kiện mạng, giúp quá trình truyền dữ liệu từ thiết bị lên server diễn ra ổn định và tin cậy. Ngoài ra, các thư viện truy cập UART như android-serialport-api hỗ trợ thiết bị đọc dữ liệu GNSS trực tiếp từ cổng nối tiếp, trích xuất thông tin định vị theo chuẩn NMEA.
+
+Về phía ThingsBoard, các công cụ tích hợp sẵn như Rule Engine, Attribute Mapping, và Widget Library hỗ trợ xử lý dữ liệu đầu vào và trực quan hóa thông tin trên dashboard. Các widget được sử dụng để hiển thị tọa độ GPS, lịch sử di chuyển, geofence, cũng như trạng thái hoạt động của thiết bị theo thời gian thực.
+
+So với việc tự xây dựng các thành phần này từ đầu, việc sử dụng thư viện và phần mềm có sẵn giúp đảm bảo tính ổn định và tương thích với hệ thống, đồng thời phù hợp với thực tiễn triển khai các ứng dụng IoT hiện nay. Tất cả các thư viện sử dụng đều là mã nguồn mở và được cộng đồng hỗ trợ rộng rãi, đảm bảo dễ dàng bảo trì và mở rộng trong tương lai.
+\section{Tổng kết chương}
+\label{section:3.6}
+Trong chương này, tôi đã trình bày các công nghệ, nền tảng và công cụ chính được sử dụng trong quá trình phát triển hệ thống giám sát vị trí NaviTracker. Cụ thể, phần cứng thiết bị NaviTracker được lựa chọn nhờ khả năng tích hợp GNSS và truyền thông di động, đáp ứng yêu cầu giám sát vị trí liên tục. Về phần mềm, ứng dụng được phát triển trên nền Android với ngôn ngữ Java, cho phép triển khai linh hoạt các chức năng như thu thập dữ liệu, truyền thông qua MQTT, và xử lý cục bộ. Giao thức MQTT được sử dụng để đảm bảo việc truyền dữ liệu nhanh, nhẹ và ổn định trong môi trường IoT. Nền tảng ThingsBoard đóng vai trò trung tâm hiển thị, lưu trữ và tương tác với thiết bị thông qua các dashboard trực quan. Cuối cùng, các thư viện và phần mềm hỗ trợ giúp đơn giản hóa việc lập trình, nâng cao độ tin cậy và khả năng mở rộng của hệ thống.
+
+Tất cả các công nghệ trên đều được lựa chọn dựa trên yêu cầu thực tiễn của hệ thống đã phân tích ở Chương 2, đồng thời được cân nhắc kỹ lưỡng so với các lựa chọn thay thế. Việc tích hợp các thành phần này một cách hợp lý đã tạo nền tảng kỹ thuật vững chắc cho việc hiện thực hóa hệ thống trong các chương tiếp theo.
+\end{document}
