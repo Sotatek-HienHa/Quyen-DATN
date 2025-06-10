@@ -40,7 +40,7 @@ Luồng xử lý UART đảm bảo rằng dữ liệu GNSS được tiếp nhậ
 \end{figure}
 \subsection{Lớp xử lý dữ liệu}
 \label{subsection:4.2.2}
-
+Lớp xử lý dữ liệu đóng vai trò trung gian trong hệ thống, đảm nhận nhiệm vụ tiếp nhận dữ liệu thô từ lớp giao tiếp phần cứng, sau đó phân tích, trích xuất và xử lý thông tin định vị cần thiết. Lớp này được cấu trúc thành nhiều mô-đun chức năng, mỗi mô-đun đảm nhận một nhiệm vụ chuyên biệt tương ứng với các loại bản tin định vị khác nhau.
 \subsubsection{Các bản tin từ module GNSS ublox NEO-M9}
 \label{subsubsection:4.2.2.1}
 Module GNSS u-blox NEO-M9 hỗ trợ truyền dữ liệu định vị qua hai định dạng bản tin chính là NMEA và UBX. Bản tin NMEA được sử dụng phổ biến để cung cấp thông tin vị trí dưới dạng chuỗi ASCII, trong khi bản tin UBX là định dạng nhị phân độc quyền của u-blox, cho phép truyền thông tin cấu hình và trạng thái với độ chính xác và linh hoạt cao hơn. Hệ thống phần mềm sử dụng bốn bản tin chính: \texttt{NMEA-RMC}, \texttt{UBX-CFG-GNSS}, \texttt{UBX-NAV-STATUS} và \texttt{UBX-RXM-SFRBX}, với chức năng và cấu trúc như sau:
@@ -167,4 +167,22 @@ Một chức năng quan trọng khác của lớp xử lý dữ liệu là hỗ 
 Ngoài ra, để đảm bảo hoạt động ổn định trong môi trường mạng không liên tục, các bản ghi dữ liệu định vị sẽ được lưu tạm thời bằng lớp \texttt{LocalStorageManager}. Khi mạng ổn định trở lại, dữ liệu này sẽ được đồng bộ qua lớp truyền thông MQTT. Cơ chế này giúp tránh mất dữ liệu trong quá trình thiết bị di chuyển qua các khu vực có chất lượng kết nối kém.
 
 Toàn bộ lớp xử lý dữ liệu được thiết kế theo hướng mở rộng và tương thích với nhiều loại bản tin GNSS khác nhau, đảm bảo hiệu quả phân tích và tính linh hoạt trong các tình huống vận hành thực tế.
+\subsection{Lớp truyền thông}
+\label{subsection:4.2.3}
+Lớp truyền thông có vai trò kết nối giữa thiết bị và nền tảng ThingsBoard thông qua giao thức MQTT. Thành phần trung tâm của lớp này là lớp \texttt{MqttHandler}, chịu trách nhiệm khởi tạo kết nối, gửi dữ liệu định vị, gửi các thông số trạng thái hệ thống và tiếp nhận các cấu hình điều khiển từ xa. 
+
+Ngay khi khởi động, \texttt{MqttHandler} tiến hành kết nối đến máy chủ MQTT bằng định danh thiết bị ThingsBoard. Sau khi kết nối thành công, thiết bị sẽ tự động gửi một bản tin \texttt{init} chứa các thuộc tính cấu hình hiện tại của thiết bị.
+
+Chương trình sử dụng hai topic chính: \texttt{telemetryTopic} để gửi dữ liệu thời gian thực như toạ độ và tốc độ di chuyển và \texttt{attributeTopic} để gửi hoặc nhận các thuộc tính cấu hình hệ thống như trạng thái pin, geofence hoặc điều kiện hoạt động. Tùy theo chế độ định vị, hệ thống sử dụng hai chế độ gửi dữ liệu:
+\begin{itemize}
+    \item \texttt{DEVICE\_LOCATION}: gửi tọa độ từ dịch vụ định vị của Android.
+    \item \texttt{UBLOX\_LOCATION}: gửi tọa độ GNSS trung bình từ module u-blox.
+\end{itemize}
+
+Để tối ưu hiệu suất truyền thông và tiết kiệm năng lượng, lớp này chỉ gửi dữ liệu khi thiết bị có kết nối mạng hoặc khi tọa độ thay đổi vượt qua ngưỡng cấu hình. Nếu mất mạng, dữ liệu sẽ được lưu tạm thời trong bộ nhớ cục bộ thông qua lớp \texttt{LocalStorageManager} và tự động đồng bộ lại khi mạng ổn định trở lại.
+
+Ngoài dữ liệu định vị, \texttt{MqttHandler} cũng xử lý các bản tin phản hồi từ ThingsBoard. Các bản tin thuộc chủ đề thuộc tính (\texttt{attribute}) được phân tích và cập nhật trực tiếp vào các thông số hoạt động như khoảng cách tối đa (\texttt{maxDistance}), thời gian tối đa (\texttt{maxTimeout}), tên tỉnh giám sát hoặc trạng thái bật/tắt vùng geofence. Nếu geofence được bật, ranh giới địa lý tương ứng với tỉnh được lấy từ file \texttt{provinces.json} và gửi ngược lên server để hiển thị trên dashboard.
+
+Cuối cùng, lớp này còn hỗ trợ gửi các thuộc tính trạng thái như mức pin, trạng thái sạc, trạng thái GPS và cờ xác định thiết bị có nằm ngoài khu vực địa lý không (\texttt{isOutside}). Toàn bộ lớp được thiết kế bất đồng bộ, với cơ chế tự động kết nối lại khi xảy ra gián đoạn để đảm bảo tính liên tục trong quá trình truyền nhận dữ liệu.
+
 \end{document}

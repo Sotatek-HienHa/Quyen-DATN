@@ -32,26 +32,29 @@
 \contentsline {subsection}{\numberline {4.2.1}Lớp giao tiếp phần cứng}{17}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Lớp xử lý dữ liệu}{19}{subsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.1}Các bản tin từ module GNSS ublox NEO-M9}{19}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Luồng xử lý dữ liệu}{20}{subsubsection.4.2.2.2}%
-\contentsline {chapter}{\numberline {5}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{22}{chapter.5}%
-\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{23}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Kết luận}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hướng phát triển}{23}{section.6.2}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{26}{section*.15}%
-\contentsline {chapter}{PHỤ LỤC}{27}{section*.16}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Luồng xử lý dữ liệu}{21}{subsubsection.4.2.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Lớp truyền thông}{22}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cài đặt và cấu hình Thingsboard}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Cấu hình NAT để truy cập từ Internet}{25}{section.5.2}%
+\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kết luận}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hướng phát triển}{26}{section.6.2}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{29}{section*.15}%
+\contentsline {chapter}{PHỤ LỤC}{30}{section*.16}%
 \ttl@change@i {\@ne }{chapter}{0.0cm}{\bfseries \vspace {0.3cm}}{{\bfseries {\scshape } \thecontentslabel .\ }}{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
 \ttl@change@v {chapter}{}{}{}\relax 
-\contentsline {chapter}{\numberline {A}HƯỚNG DẪN VIẾT ĐỒ ÁN TỐT NGHIỆP}{27}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Ngành học}{28}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}Đánh dấu (bullet) và đánh số (numering)}{28}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}Cách thêm bảng}{29}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Chèn hình ảnh}{29}{section.a.A.4}%
-\contentsline {section}{\numberline {A.5}Tài liệu tham khảo}{29}{section.a.A.5}%
-\contentsline {paragraph}{\numberline {A.5.0.0.1}Cách liệt kê}{29}{paragraph.a.A.5.0.0.1}%
-\contentsline {paragraph}{\numberline {A.5.0.0.2}Các loại tài liệu tham khảo}{30}{paragraph.a.A.5.0.0.2}%
-\contentsline {section}{\numberline {A.6}Cách viết phương trình và công thức toán học}{30}{section.a.A.6}%
-\contentsline {section}{\numberline {A.7}Qui cách đóng quyển}{30}{section.a.A.7}%
-\contentsline {chapter}{\numberline {B}ĐẶC TẢ USE CASE}{32}{appendix.a.B}%
-\contentsline {section}{\numberline {B.1}Đặc tả use case ``Thống kê tình hình mượn sách''}{32}{section.a.B.1}%
-\contentsline {section}{\numberline {B.2}Đặc tả use case ``Đăng ký làm thẻ mượn''}{32}{section.a.B.2}%
+\contentsline {chapter}{\numberline {A}HƯỚNG DẪN VIẾT ĐỒ ÁN TỐT NGHIỆP}{30}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Ngành học}{31}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}Đánh dấu (bullet) và đánh số (numering)}{31}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}Cách thêm bảng}{32}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Chèn hình ảnh}{32}{section.a.A.4}%
+\contentsline {section}{\numberline {A.5}Tài liệu tham khảo}{32}{section.a.A.5}%
+\contentsline {paragraph}{\numberline {A.5.0.0.1}Cách liệt kê}{32}{paragraph.a.A.5.0.0.1}%
+\contentsline {paragraph}{\numberline {A.5.0.0.2}Các loại tài liệu tham khảo}{33}{paragraph.a.A.5.0.0.2}%
+\contentsline {section}{\numberline {A.6}Cách viết phương trình và công thức toán học}{33}{section.a.A.6}%
+\contentsline {section}{\numberline {A.7}Qui cách đóng quyển}{33}{section.a.A.7}%
+\contentsline {chapter}{\numberline {B}ĐẶC TẢ USE CASE}{35}{appendix.a.B}%
+\contentsline {section}{\numberline {B.1}Đặc tả use case ``Thống kê tình hình mượn sách''}{35}{section.a.B.1}%
+\contentsline {section}{\numberline {B.2}Đặc tả use case ``Đăng ký làm thẻ mượn''}{35}{section.a.B.2}%
 \contentsfinish 

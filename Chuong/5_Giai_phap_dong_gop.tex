@@ -1,14 +1,92 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
+Trong hệ thống giám sát vị trí được xây dựng, server đóng vai trò là trung tâm tiếp nhận, xử lý và hiển thị dữ liệu định vị từ thiết bị. Thông tin thu thập từ thiết bị bao gồm tọa độ GPS, tốc độ di chuyển, trạng thái hệ thống và các thông số cấu hình liên quan. Những dữ liệu này được truyền về server theo thời gian thực thông qua giao thức MQTT và được lưu trữ để phục vụ việc giám sát, phân tích và truy xuất sau này.
 
-Chương này có độ dài tối thiểu 5 trang, tối đa không giới hạn.\footnote{Trong trường hợp phần này dưới 5 trang thì sinh viên nên gộp vào phần kết luận, không tách ra một chương riêng rẽ nữa.} Sinh viên cần trình bày tất cả những nội dung đóng góp mà mình thấy tâm đắc nhất trong suốt quá trình làm ĐATN. Đó có thể là một loạt các vấn đề khó khăn mà sinh viên đã từng bước giải quyết được, là giải thuật cho một bài toán cụ thể, là giải pháp tổng quát cho một lớp bài toán, hoặc là mô hình/kiến trúc hữu hiệu nào đó được sinh viên thiết kế.
+Nền tảng ThingsBoard được lựa chọn làm giải pháp triển khai server do khả năng hỗ trợ trực quan hóa dữ liệu IoT một cách hiệu quả và dễ cấu hình. Server không chỉ có chức năng hiển thị vị trí hiện tại trên bản đồ, mà còn lưu trữ toàn bộ lịch sử di chuyển, hiển thị trạng thái hoạt động của thiết bị và phát hiện các tình huống vượt ra khỏi vùng giới hạn địa lý (geofence).
 
-Chương này \textbf{là cơ sở quan trọng} để các thầy cô đánh giá sinh viên. Vì vậy, sinh viên cần phát huy tính sáng tạo, khả năng phân tích, phản biện, lập luận, tổng quát hóa vấn đề và tập trung viết cho thật tốt.
-Mỗi giải pháp hoặc đóng góp của sinh viên cần được trình bày trong một mục độc lập bao gồm ba mục con: (i) dẫn dắt/giới thiệu về bài toán/vấn đề, (ii) giải pháp, và (iii) kết quả đạt được (nếu có).
+Ngoài ra, hệ thống server còn cho phép người dùng cấu hình các thông số từ xa như thời gian gửi dữ liệu, khoảng cách thay đổi tối thiểu để cập nhật vị trí, bật hoặc tắt tính năng geofence và chọn khu vực cần giám sát. Những điều chỉnh này được cập nhật động và gửi ngược trở lại thiết bị thông qua bản tin attributes.
 
-Sinh viên lưu ý \textbf{không trình bày lặp lại nội dung}. Những nội dung đã trình bày chi tiết trong các chương trước không được trình bày lại trong chương này. Vì vậy, với nội dung hay, mang tính đóng góp/giải pháp, sinh viên chỉ nên tóm lược/mô tả sơ bộ trong các chương trước, đồng thời tạo tham chiếu chéo tới đề mục tương ứng trong Chương 5 này. Chi tiết thông tin về đóng góp/giải pháp được trình bày trong mục đó.
+Toàn bộ các chức năng trên được xây dựng nhằm đảm bảo hệ thống hoạt động liên tục, linh hoạt, đồng thời cung cấp giao diện thân thiện cho việc giám sát và quản lý thiết bị từ xa.
 
-Ví dụ, trong Chương 4, sinh viên có thiết kế được kiến trúc đáng lưu ý gì đó, là sự kết hợp của các kiến trúc MVC, MVP, SOA, v.v. Khi đó, sinh viên sẽ chỉ mô tả ngắn gọn kiến trúc đó ở Chương 4, rồi thêm các câu có dạng: ``Chi tiết về kiến trúc này sẽ được trình bày trong phần 5.1". 
+\section{Cài đặt và cấu hình Thingsboard}
+\label{section:5.1}
+ThingsBoard là một nền tảng mã nguồn mở chuyên dụng cho các ứng dụng IoT, hỗ trợ thu thập dữ liệu, xử lý, lưu trữ và trực quan hóa thông tin từ các thiết bị đầu cuối. Trong đồ án này, ThingsBoard được sử dụng làm server để tiếp nhận và hiển thị dữ liệu định vị từ thiết bị giám sát.
+
+Server được cài đặt trên máy tính cá nhân chạy hệ điều hành Ubuntu, sử dụng bản Community Edition của ThingsBoard. Việc cài đặt được thực hiện thông qua tập tin .deb. Sau khi cài đặt thành công, ThingsBoard hoạt động như một dịch vụ chạy nền và có thể truy cập thông qua trình duyệt tại địa chỉ mặc định là http://localhost:8080.
+
+Quá trình cấu hình ban đầu bao gồm việc khởi tạo tài khoản quản trị viên, tạo thiết bị mới (device), và gán Access Token cho thiết bị. Token này được sử dụng để xác thực mỗi khi thiết bị gửi dữ liệu lên server qua giao thức MQTT.
+
+Việc cài đặt và cấu hình ThingsBoard đảm bảo hệ thống server có thể hoạt động ổn định, tiếp nhận dữ liệu theo thời gian thực, và phục vụ cho các chức năng giám sát, hiển thị và điều khiển từ xa. Đây là bước nền tảng quan trọng để xây dựng toàn bộ kiến trúc hệ thống giám sát vị trí.
+
+\section{Cấu hình NAT để truy cập từ Internet}
+\label{section:5.2}
+Mặc định, hệ thống ThingsBoard chỉ có thể truy cập được từ bên trong mạng nội bộ (LAN) nơi server được cài đặt. Tuy nhiên, để thiết bị giám sát có thể gửi dữ liệu từ bất kỳ vị trí nào trên Internet về server, cần thực hiện cấu hình NAT (Network Address Translation) và chuyển tiếp cổng (port forwarding) trên router.
+
+Trước hết, địa chỉ IP nội bộ của máy chủ chạy ThingsBoard cần được gán cố định để tránh thay đổi mỗi khi khởi động lại hệ thống. Việc gán IP tĩnh đã được router tự động thực hiện dựa trên địa chỉ MAC của máy server.
+
+Tiếp theo, cần truy cập vào giao diện cấu hình của router để thực hiện chuyển tiếp các cổng dịch vụ từ bên ngoài vào địa chỉ IP nội bộ của máy chủ. Cụ thể đã mở các cổng sau:
+
+Cổng 8080/TCP: dùng cho giao diện quản trị ThingsBoard qua trình duyệt.
+
+Cổng 1883/TCP: dùng cho giao tiếp MQTT giữa thiết bị và server.
+
+Việc cấu hình NAT và mở cổng thành công cho phép hệ thống giám sát hoạt động liên tục và ổn định từ mọi vị trí có kết nối Internet. Đây là bước quan trọng để hệ thống có thể triển khai thực tế và phục vụ nhu cầu giám sát từ xa.
+
+\section{Giao tiếp thiết bị với server qua giao thức MQTT}
+\label{section:5.3}
+
+Trong hệ thống được xây dựng, thiết bị giám sát sử dụng giao thức MQTT để truyền dữ liệu về server ThingsBoard. MQTT (Message Queuing Telemetry Transport) là một giao thức truyền thông nhẹ, tối ưu cho các thiết bị IoT có tài nguyên giới hạn và mạng kết nối không ổn định. Giao thức này hỗ trợ cơ chế publish/subscribe, cho phép thiết bị gửi dữ liệu lên server và nhận lại các thông số cấu hình từ xa.
+
+Trên thiết bị, thư viện \texttt{MqttAndroidClient} được sử dụng để thiết lập kết nối đến ThingsBoard thông qua địa chỉ broker tại cổng 1883. Xác thực kết nối được thực hiện thông qua chuỗi \texttt{Access Token} được cấp khi tạo thiết bị trên ThingsBoard. Chuỗi token này được đặt tại trường \texttt{username} khi kết nối MQTT, trong khi \texttt{clientId} được sinh tự động theo UUID.
+
+Sau khi kết nối thành công, thiết bị thực hiện hai chức năng chính:
+\begin{itemize}
+    \item \textbf{Gửi dữ liệu telemetry:} Bao gồm các trường như \texttt{latitude}, \texttt{longitude}, \texttt{speed}, \texttt{gps\_status}, \texttt{distance}, \texttt{battery\_level} và \texttt{is\_charging}. Các bản tin này được gửi định kỳ hoặc khi có thay đổi lớn về vị trí hoặc trạng thái hệ thống.
+    \item \textbf{Gửi và nhận thuộc tính (attributes):} Thiết bị gửi các thông tin như \texttt{isOutside}, \texttt{provinceBoundary}, đồng thời đăng ký nhận bản tin attributes từ ThingsBoard. Khi người dùng thay đổi thông số từ giao diện, chẳng hạn \texttt{max\_timeout}, \texttt{max\_distance}, \texttt{isGeofenceEnable}, hay \texttt{provinces}, ThingsBoard sẽ gửi các thuộc tính này về thiết bị. Thiết bị tiếp nhận và cập nhật lại cấu hình hoạt động tương ứng.
+\end{itemize}
+
+Các bản tin dữ liệu được đóng gói ở định dạng JSON. Ví dụ bản tin telemetry có dạng:
+\begin{verbatim}
+{
+  "latitude": 21.028511,
+  "longitude": 105.804817,
+  "speed": 12.5
+}
+\end{verbatim}
+Trong khi đó, bản tin attributes có thể như sau:
+\begin{verbatim}
+{
+  "battery_level": 85,
+  "is_charging": false
+}
+\end{verbatim}
+
+Trước khi gửi bản tin, thiết bị luôn kiểm tra trạng thái kết nối. Nếu mất kết nối, hệ thống sẽ tự động thực hiện kết nối lại và gửi bản tin sau khi kết nối thành công. Nếu mạng không khả dụng, dữ liệu sẽ được lưu cục bộ và tự động đồng bộ lại khi có kết nối trở lại.
+
+Việc sử dụng giao thức MQTT giúp hệ thống đạt được độ trễ thấp, độ tin cậy cao và khả năng mở rộng tốt. Đây là nền tảng quan trọng để đảm bảo kết nối liên tục giữa thiết bị và server trong các ứng dụng giám sát IoT thực tế.
+
+
+\section{Thiết kế dashboard hiển thị dữ liệu}
+\label{section:5.4}
+Dashboard trong ThingsBoard là giao diện trực quan cho phép người dùng theo dõi dữ liệu thu thập từ thiết bị theo thời gian thực. Việc thiết kế dashboard đóng vai trò quan trọng trong việc trình bày thông tin một cách rõ ràng, dễ quan sát và thuận tiện cho việc giám sát từ xa.
+
+Trong hệ thống được triển khai, dashboard được xây dựng để hiển thị các nhóm thông tin chính như sau:
+
+\begin{itemize}
+    \item \textbf{Vị trí hiện tại của thiết bị:} Sử dụng widget dạng \textit{Map} để hiển thị tọa độ GPS. Vị trí của thiết bị được cập nhật liên tục thông qua dữ liệu telemetry gửi từ thiết bị. Marker trên bản đồ di chuyển theo vị trí thực tế, cho phép giám sát hành trình trực tiếp.
+    
+    \item \textbf{Lịch sử di chuyển:} Các dữ liệu định vị được lưu trữ tự động và có thể hiển thị lại theo khoảng thời gian tùy chọn. Người dùng có thể chọn khung thời gian cụ thể để truy xuất và quan sát tuyến đường đã đi của thiết bị.
+    
+    \item \textbf{Thông số vận hành của thiết bị:} Bao gồm tốc độ di chuyển (\texttt{speed}), trạng thái định vị (\texttt{gps\_status}), mức pin (\texttt{battery\_level}) và trạng thái sạc (\texttt{is\_charging}). Các dữ liệu này được hiển thị thông qua các widget như \textit{Gauge}, \textit{Chart}, hoặc \textit{Label}.
+    
+    \item \textbf{Trạng thái vùng giám sát (Geofence):} Khi tính năng geofence được bật, hệ thống sẽ kiểm tra xem thiết bị có nằm trong khu vực cho phép hay không. Widget cảnh báo sẽ hiển thị trạng thái \texttt{isOutside} bằng màu sắc hoặc thông báo, giúp người dùng nhận biết tức thời khi thiết bị vượt ra khỏi khu vực quy định.
+    
+    \item \textbf{Thông tin cấu hình:} Các tham số như \texttt{max\_timeout}, \texttt{max\_distance} và \texttt{provinces} được hiển thị trong bảng cấu hình. Người dùng có thể thay đổi các giá trị này trực tiếp trên dashboard. Các thay đổi sẽ được ThingsBoard gửi về thiết bị thông qua bản tin \textit{attributes}.
+\end{itemize}
+
+Tất cả các widget được bố trí theo nhóm chức năng, sắp xếp hợp lý nhằm tối ưu hóa khả năng quan sát và thao tác. Dashboard hỗ trợ cập nhật dữ liệu thời gian thực, có khả năng tùy biến về giao diện và tương thích với nhiều kích thước màn hình, bao gồm cả máy tính và thiết bị di động.
+
+Việc thiết kế dashboard đóng vai trò quan trọng trong việc chuyển hóa dữ liệu kỹ thuật sang dạng thông tin trực quan. Điều này giúp người vận hành hệ thống dễ dàng đánh giá tình trạng thiết bị, phát hiện bất thường và đưa ra phản ứng kịp thời. Đây là thành phần then chốt trong việc hiện thực hóa một hệ thống giám sát IoT hiệu quả và thân thiện với người dùng.
 
 
 \end{document}
