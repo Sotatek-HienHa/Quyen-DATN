@@ -1,12 +1,26 @@
 \documentclass[../DoAn.tex]{subfiles}
 \begin{document}
 \section{Kết luận}
-Sinh viên so sánh kết quả nghiên cứu hoặc sản phẩm của mình với các nghiên cứu hoặc sản phẩm tương tự.
+\label{section:6.1}
+Hệ thống giám sát vị trí GNSS được phát triển trong khuôn khổ đồ án đã đáp ứng được các mục tiêu kỹ thuật đặt ra ban đầu. Cụ thể, hệ thống có khả năng thu thập dữ liệu GNSS thông qua giao tiếp UART, phân tích dữ liệu từ các bản tin NMEA và UBX, đồng thời truyền thông tin định vị và trạng thái hệ thống lên nền tảng ThingsBoard qua giao thức MQTT. Việc tích hợp thêm các chức năng như cảnh báo geofence, lưu trữ dữ liệu cục bộ, đồng bộ hóa khi có mạng, và cho phép điều khiển từ xa các tham số hoạt động đã góp phần hoàn thiện giải pháp giám sát thời gian thực.
 
-Sinh viên phân tích trong suốt quá trình thực hiện ĐATN, mình đã làm được gì, chưa làm được gì, các đóng góp nổi bật là gì, và tổng hợp những bài học kinh nghiệm rút ra nếu có.
+So với các giải pháp giám sát vị trí hiện có, hệ thống trong đồ án có tính linh hoạt cao hơn về mặt cấu hình và triển khai, đồng thời tận dụng được lợi thế của nền tảng mã nguồn mở ThingsBoard để trực quan hóa dữ liệu. Việc sử dụng đồng thời cả dữ liệu GNSS từ thiết bị chuyên dụng và dịch vụ định vị của Android cho phép hệ thống hoạt động ổn định hơn trong các điều kiện khác nhau.
+
+Trong quá trình thực hiện đồ án, sinh viên đã hoàn thành toàn bộ các chức năng cốt lõi của hệ thống như thiết kế mô-đun phần mềm, phân tích bản tin GNSS, xử lý và truyền dữ liệu, cũng như triển khai giao diện hiển thị và giám sát. Tuy nhiên, một số nội dung nâng cao chưa được tích hợp như chức năng phát hiện tín hiệu GNSS giả mạo, tối ưu thuật toán lọc dữ liệu và nâng cao tính bảo mật khi truyền dữ liệu.
+
+Đóng góp nổi bật của đồ án là xây dựng được một hệ thống nhúng có khả năng giám sát hành trình với kiến trúc phần mềm rõ ràng, dễ mở rộng và có khả năng kết nối hiệu quả với nền tảng IoT. Đồng thời, việc xử lý linh hoạt theo từng tỉnh/thành phố và khả năng cập nhật tham số từ xa cũng là những điểm mới nổi bật.
+
+Thông qua quá trình thực hiện, sinh viên đã rút ra nhiều bài học thực tiễn trong việc phát triển hệ thống nhúng tích hợp GNSS và IoT. Cụ thể, sinh viên tích lũy được kinh nghiệm trong việc xử lý dữ liệu thời gian thực, làm việc với giao tiếp phần cứng ở mức thấp, tổ chức phần mềm theo hướng mô-đun hóa và triển khai hệ thống giám sát phân tán qua mạng. Những kinh nghiệm này là nền tảng quan trọng để phát triển các dự án có tính hệ thống và tích hợp cao trong tương lai.
 
 \section{Hướng phát triển}
-Trong phần này, sinh viên trình bày định hướng công việc trong tương lai để hoàn thiện sản phẩm hoặc nghiên cứu của mình.
+\label{section:6.2}
+Để hoàn thiện hơn nữa hệ thống giám sát GNSS đã xây dựng, cần thực hiện một số công việc bổ sung nhằm tăng độ ổn định và tính ứng dụng thực tế. Trước hết, hệ thống cần được cải tiến về cơ chế lưu trữ và đồng bộ dữ liệu. Việc mở rộng khả năng lưu log định vị chi tiết hơn, kèm theo thời gian và trạng thái hoạt động của thiết bị, sẽ giúp nâng cao hiệu quả phân tích sau này. Ngoài ra, chức năng gửi lại dữ liệu khi mất kết nối nên được thiết kế theo hướng có xác nhận từ server để đảm bảo dữ liệu không bị mất mát.
 
-Trước tiên, sinh viên trình bày các công việc cần thiết để hoàn thiện các chức năng/nhiệm vụ đã làm. Sau đó sinh viên phân tích các hướng đi mới cho phép cải thiện và nâng cấp các chức năng/nhiệm vụ đã làm.
+Một vấn đề khác cần được xử lý là độ chính xác và độ tin cậy của dữ liệu GNSS. Việc tích hợp thêm thuật toán lọc số liệu, chẳng hạn như lọc Kalman, sẽ giúp loại bỏ các nhiễu loạn nhất thời và tăng cường độ ổn định của hệ thống. Song song đó, cần tối ưu hóa quá trình xử lý dữ liệu để giảm độ trễ khi gửi thông tin lên server, nhất là trong các điều kiện mạng yếu hoặc không ổn định.
+
+Về các hướng phát triển mở rộng, một trong những tính năng quan trọng cần nghiên cứu là phát hiện tín hiệu GNSS giả mạo. Hệ thống hiện tại chưa có cơ chế phát hiện các nguồn tín hiệu không hợp lệ, trong khi đây là yếu tố quan trọng trong các ứng dụng liên quan đến an ninh và giám sát. Một hướng tiếp cận khả thi là kết hợp dữ liệu GNSS với các cảm biến quán tính (IMU) để phát hiện sai lệch bất thường, hoặc ứng dụng các phương pháp học máy để phân loại tín hiệu.
+
+Bên cạnh đó, có thể phát triển thêm các chức năng giám sát nâng cao như phân tích hành trình, phát hiện dừng bất thường, hoặc cảnh báo tốc độ vượt ngưỡng. Việc mở rộng hệ thống sang các mô hình quản lý đội phương tiện hoặc logistics cũng là hướng đi tiềm năng, giúp nâng cao giá trị ứng dụng của sản phẩm.
+
+Cuối cùng, về giao diện hiển thị, có thể tích hợp các biểu đồ thống kê, lịch sử di chuyển và bảng cảnh báo trực quan hơn trên ThingsBoard. Việc cung cấp giao diện tương tác cho người dùng cuối sẽ giúp hệ thống dễ sử dụng, dễ giám sát và phù hợp hơn với yêu cầu thực tế trong các bài toán triển khai trên diện rộng.
 \end{document}

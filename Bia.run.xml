@@ -44,11 +44,11 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>DoAn.aux</file>
-      <file>DoAn-blx.bib</file>
+      <file>Bia.aux</file>
+      <file>Bia-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>DoAn.bbl</file>
+      <file>Bia.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -70,20 +70,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>DoAn</infile>
+      <infile>Bia</infile>
     </cmdline>
     <input>
-      <file>DoAn.aux</file>
+      <file>Bia.aux</file>
     </input>
     <output>
-      <file>DoAn.bbl</file>
+      <file>Bia.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>DoAn.bbl</file>
+      <file>Bia.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>DoAn.aux</file>
-      <file>DoAn-blx.bib</file>
+      <file>Bia.aux</file>
+      <file>Bia-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>Danh_sach_tai_lieu_tham_khao.bib</file>

@@ -22,39 +22,32 @@
 \contentsline {chapter}{\numberline {3}CÔNG NGHỆ SỬ DỤNG}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Thiết bị NaviTracker}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Ngôn ngữ và môi trường phát triển}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Giao thức truyền thông MQTT}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Nền tảng hiển thị: ThingsBoard}{13}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Các thư viện và phần mềm hỗ trợ}{14}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Tổng kết chương}{14}{section.3.6}%
-\contentsline {chapter}{\numberline {4}THIẾT KẾ, TRIỂN KHAI VÀ ĐÁNH GIÁ HỆ THỐNG}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Kiến trúc tổng thể phần mềm}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Thiết kế phân lớp phần mềm}{17}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Lớp giao tiếp phần cứng}{17}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Lớp xử lý dữ liệu}{19}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Các bản tin từ module GNSS ublox NEO-M9}{19}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Luồng xử lý dữ liệu}{21}{subsubsection.4.2.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Lớp truyền thông}{22}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}CÁC GIẢI PHÁP VÀ ĐÓNG GÓP NỔI BẬT}{24}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Cài đặt và cấu hình Thingsboard}{24}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Cấu hình NAT để truy cập từ Internet}{25}{section.5.2}%
-\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{26}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Kết luận}{26}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hướng phát triển}{26}{section.6.2}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{29}{section*.15}%
-\contentsline {chapter}{PHỤ LỤC}{30}{section*.16}%
-\ttl@change@i {\@ne }{chapter}{0.0cm}{\bfseries \vspace {0.3cm}}{{\bfseries {\scshape } \thecontentslabel .\ }}{}{\titlerule *[0.3pc]{.}\contentspage }\relax 
-\ttl@change@v {chapter}{}{}{}\relax 
-\contentsline {chapter}{\numberline {A}HƯỚNG DẪN VIẾT ĐỒ ÁN TỐT NGHIỆP}{30}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Ngành học}{31}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}Đánh dấu (bullet) và đánh số (numering)}{31}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}Cách thêm bảng}{32}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Chèn hình ảnh}{32}{section.a.A.4}%
-\contentsline {section}{\numberline {A.5}Tài liệu tham khảo}{32}{section.a.A.5}%
-\contentsline {paragraph}{\numberline {A.5.0.0.1}Cách liệt kê}{32}{paragraph.a.A.5.0.0.1}%
-\contentsline {paragraph}{\numberline {A.5.0.0.2}Các loại tài liệu tham khảo}{33}{paragraph.a.A.5.0.0.2}%
-\contentsline {section}{\numberline {A.6}Cách viết phương trình và công thức toán học}{33}{section.a.A.6}%
-\contentsline {section}{\numberline {A.7}Qui cách đóng quyển}{33}{section.a.A.7}%
-\contentsline {chapter}{\numberline {B}ĐẶC TẢ USE CASE}{35}{appendix.a.B}%
-\contentsline {section}{\numberline {B.1}Đặc tả use case ``Thống kê tình hình mượn sách''}{35}{section.a.B.1}%
-\contentsline {section}{\numberline {B.2}Đặc tả use case ``Đăng ký làm thẻ mượn''}{35}{section.a.B.2}%
+\contentsline {section}{\numberline {3.3}Giao thức truyền thông MQTT}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Nền tảng hiển thị: ThingsBoard}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Các thư viện và phần mềm hỗ trợ}{16}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Tổng kết chương}{17}{section.3.6}%
+\contentsline {chapter}{\numberline {4}THIẾT KẾ PHẦN MỀM THIẾT BỊ GNSS}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kiến trúc tổng thể hệ thống}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Thiết kế phần mềm trên thiết bị Android}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Kiến trúc phân lớp phần mềm}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Lớp giao tiếp phần cứng}{20}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Lớp xử lý dữ liệu}{21}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {a}Các bản tin từ module GNSS ublox NEO-M9}{21}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {b}Luồng xử lý dữ liệu}{26}{subsubsection.4.2.3.2}%
+\contentsline {subsection}{\numberline {4.2.4}Lớp truyền thông}{28}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Phần mềm nhúng trên vi điều khiển ATmega8}{28}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Cấu hình các chân GPIO trên vi điều khiển ATmega8}{29}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Cơ chế ngắt và cấu hình ngắt trên ATmega8}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Cơ chế tiết kiệm năng lượng trên ATmega8}{33}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Cơ chế hoạt động của chương trình}{35}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}TRIỂN KHAI HỆ THỐNG SERVER}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cài đặt và cấu hình Thingsboard}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Cấu hình NAT để truy cập từ Internet}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Giao tiếp thiết bị với server qua giao thức MQTT}{38}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Thiết kế dashboard hiển thị dữ liệu}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Kết luận chương}{40}{section.5.5}%
+\contentsline {chapter}{\numberline {6}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{42}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kết luận}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hướng phát triển}{42}{section.6.2}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{44}{section*.14}%
 \contentsfinish 

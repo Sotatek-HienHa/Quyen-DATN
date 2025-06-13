@@ -1,12 +1,17 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.13)  13 JUN 2025 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.13)  12 JUN 2025 09:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"c:/Users/hienc/Documents/Quyá»ƒn DATN/DoAn.tex"
-(c:/Users/hienc/Documents/Quyá»ƒn DATN/DoAn.tex
+**"c:/Users/hienc/Documents/Quyá»ƒn DATN/Bia.tex"
+(c:/Users/hienc/Documents/Quyá»ƒn DATN/Bia.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
-(C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+(C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `DoAn.tex'
+(C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+) (DoAn.tex (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
 (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
@@ -378,9 +383,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enitdp@description=\count278
 ) (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
- (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
-Package: import 2020/04/01  v 6.2
-)) (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+) (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box58
 \beforetitleunit=\skip59
@@ -1072,9 +1075,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
 )
 \c@example=\count493
+))
 \@quotelevel=\count494
 \@quotereset=\count495
-LaTeX Font Info:    Trying to load font information for T5+ptm on input line 162.
+LaTeX Font Info:    Trying to load font information for T5+ptm on input line 5.
  (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5ptm.fd
 File: t5utm.fd 2005/08/24 Fontinst v1.929 font definitions for T5/ptm.
 )
@@ -1082,35 +1086,29 @@ File: t5utm.fd 2005/08/24 Fontinst v1.929 font definitions for T5/ptm.
 LaTeX Warning: Unused global option(s):
     [13pt,3p].
 
-(DoAn.aux
-\g__glossaries_gls_ref_acronym_int=\count496
+(Bia.aux)
+\openout1 = `Bia.aux'.
 
-
-LaTeX Warning: Label `fig:label' multiply defined.
-
-)
-\openout1 = `DoAn.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1148,16 +1146,16 @@ LaTeX Font Info:    ... okay on input line 162.
 
 (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count497
+\scratchcounter=\count496
 \scratchdimen=\dimen275
 \scratchbox=\box82
-\nofMPsegments=\count498
-\nofMParguments=\count499
+\nofMPsegments=\count497
+\nofMParguments=\count498
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count500
+\MPscratchCnt=\count499
 \MPscratchDim=\dimen276
-\MPnumerator=\count501
-\makeMPintoPDFobject=\count502
+\MPnumerator=\count500
+\makeMPintoPDFobject=\count501
 \everyMPtoPDFconversion=\toks56
 ) (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1182,7 +1180,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count503
+\c@lstlisting=\count502
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
@@ -1194,20 +1192,19 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout4 = `DoAn-blx.bib'.
+\openout4 = `Bia-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'DoAn.bbl' not found.
+Package biblatex Info: ... file 'Bia.bbl' not found.
 
-No file DoAn.bbl.
-Package biblatex Info: Reference section=0 on input line 162.
-Package biblatex Info: Reference segment=0 on input line 162.
-Package hyperref Info: Link coloring OFF on input line 162.
-(DoAn.out) (DoAn.out)
+No file Bia.bbl.
+Package biblatex Info: Reference section=0 on input line 5.
+Package biblatex Info: Reference segment=0 on input line 5.
+Package hyperref Info: Link coloring OFF on input line 5.
+(Bia.out) (Bia.out)
 \@outlinefile=\write5
-\openout5 = `DoAn.out'.
+\openout5 = `Bia.out'.
 
- (Bia.tex
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 37.
 
 
@@ -1251,748 +1248,13 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/hienc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/vntex/t5.enc}]) (Chuong/0_2_Loi_cam_on.tex) [1] (Chuong/0_3_Tom_tat_noi_dung.tex)
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.181 \newpage
-               [1] (Chuong/0_4_Tom_tat_noi_dung_English.tex)
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.187 \newpage
-               [1] (DoAn.toc
-Underfull \vbox (badness 10000) has occurred while \output is active []
+{C:/Users/hienc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/vntex/t5.enc}]
 
- [1
+Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
+ found. (Remove \makenoidxglossaries if you don't want any glossaries.)
+This document will not have a glossary.
 
-])
-\tf@toc=\write6
-\openout6 = `DoAn.toc'.
-
- [2] (DoAn.lof)
-\tf@lof=\write7
-\openout7 = `DoAn.lof'.
-
- [3
-
-
-
-] (DoAn.lot)
-\tf@lot=\write8
-\openout8 = `DoAn.lot'.
-
-
-
-Package glossaries Warning: Empty glossary for \printnoidxglossary[type={main}]. Rerun may be required (or you may have forgotten to use commands like \gls) on input line 243.
-
-
-Package glossaries Info: Preparing to sort glossary `acronym' (total number of
-(glossaries)             referenced entries: 5)
-
-[4
-
-] [5
-
-
-]
-Ch\uhorn \ohorn ng 1.
-(Chuong/1_Gioi_thieu.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.17 
-      [1
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[2])
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[3]
-Ch\uhorn \ohorn ng 2.
-(Chuong/2_Khao_sat.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[6]
-<Hinhve/system_diagram.png, id=353, 1541.76pt x 1027.84pt>
-File: Hinhve/system_diagram.png Graphic file (type png)
-<use Hinhve/system_diagram.png>
-Package pdftex.def Info: Hinhve/system_diagram.png  used on input line 62.
-(pdftex.def)             Requested size: 426.79135pt x 284.51537pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[7]
-Underfull \vbox (badness 4699) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[8 <./Hinhve/system_diagram.png (PNG copy)>]
-Overfull \hbox (14.0906pt too wide) in paragraph at lines 78--79
-\T5/ptm/m/n/13 ^^_÷ñc lüa chån do kh£ n«ng xû lþ l÷ñng lîn dú li»u ^^_ành và vîi tèc ^^_ë cao. TimescaleDB
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[9])
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[10]
-Ch\uhorn \ohorn ng 3.
-(Chuong/3_Cong_nghe.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[16])
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 15.977pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.977pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-5.977pt}.
-
-[17]
-Ch\uhorn \ohorn ng 4.
-(Chuong/4_Ket_qua_thuc_nghiem.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18
-
-]
-<Hinhve/System.png, id=404, 1044.15094pt x 696.35156pt>
-File: Hinhve/System.png Graphic file (type png)
-<use Hinhve/System.png>
-Package pdftex.def Info: Hinhve/System.png  used on input line 29.
-(pdftex.def)             Requested size: 341.43437pt x 227.7035pt.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[19 <./Hinhve/System.png>]
-<Hinhve/HardwareFlow.png, id=411, 713.66624pt x 111.41624pt>
-File: Hinhve/HardwareFlow.png Graphic file (type png)
-<use Hinhve/HardwareFlow.png>
-Package pdftex.def Info: Hinhve/HardwareFlow.png  used on input line 50.
-(pdftex.def)             Requested size: 426.79135pt x 66.62924pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[20]
-Overfull \hbox (40.13664pt too wide) in alignment at lines 64--68
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (40.13664pt too wide) in alignment at lines 68--73
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (40.13664pt too wide) in alignment at lines 73--76
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (40.13664pt too wide) in alignment at lines 76--78
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (40.13664pt too wide) in alignment at lines 78--98
- [] [] [] [] [] [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[21 <./Hinhve/HardwareFlow.png>]
-Overfull \hbox (6.01164pt too wide) in alignment at lines 103--107
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (6.01164pt too wide) in alignment at lines 107--112
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (6.01164pt too wide) in alignment at lines 112--115
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (6.01164pt too wide) in alignment at lines 115--117
- [] [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-[]|\T5/ptm/m/n/13 H÷îng di chuyºn
- []
-
-
-Underfull \hbox (badness 2027) in paragraph at lines 120--120
-\T5/ptm/m/n/13 m°t ^^_§t (^^_óng theo
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 127--127
-[]|\T5/ptm/m/n/13 ^^^ìn và tèc ^^_ë: K
- []
-
-
-Underfull \hbox (badness 2173) in paragraph at lines 128--128
-\T5/ptm/m/n/13 b£n NMEA 2.3 trð
- []
-
-
-Underfull \hbox (badness 5022) in paragraph at lines 129--129
-[]|\T5/ptm/m/n/13 Checksum ^^_º kiºm
- []
-
-
-Overfull \hbox (6.01164pt too wide) in alignment at lines 117--133
- [] [] [] [] [] [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[22]
-Overfull \hbox (50.25064pt too wide) in alignment at lines 137--141
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 141--146
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 146--149
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 149--151
- [] [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 159--159
-[]|\T5/ptm/m/n/13 Ch§t l÷ñng t½n hi»u
- []
-
-
-Underfull \hbox (badness 1092) in paragraph at lines 160--160
-[]|\T5/ptm/m/n/13 Sè v» tinh sû döng
- []
-
-
-Underfull \hbox (badness 4634) in paragraph at lines 161--161
-[]|\T5/ptm/m/n/13 ^^^ë ph¥n gi£i theo
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 165--165
-[]|\T5/ptm/m/n/13 ^^^ìn và ^^_ë l»ch ^^_àa
- []
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 167--167
-[]|\T5/ptm/m/n/13 M¢ tr¤m ph¡t hi»u
- []
-
-
-Underfull \hbox (badness 5022) in paragraph at lines 168--168
-[]|\T5/ptm/m/n/13 Checksum ^^_º kiºm
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 151--172
- [] [] [] [] [] [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[23]
-Overfull \hbox (50.25064pt too wide) in alignment at lines 177--181
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 181--186
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 186--189
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 189--191
- [] [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 3219) in paragraph at lines 199--199
-\T5/ptm/m/n/13 GLONASS, Galileo,
- []
-
-
-Underfull \hbox (badness 4634) in paragraph at lines 201--201
-[]|\T5/ptm/m/n/13 ^^^ë ph¥n gi£i theo
- []
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 205--205
-[]|\T5/ptm/m/n/13 M¢ tr¤m ph¡t hi»u
- []
-
-
-Underfull \hbox (badness 5022) in paragraph at lines 207--207
-[]|\T5/ptm/m/n/13 Checksum ^^_º kiºm
- []
-
-
-Overfull \hbox (50.25064pt too wide) in alignment at lines 191--211
- [] [] [] [] [] [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[24]
-Overfull \hbox (73.27809pt too wide) in paragraph at lines 217--232
- [][] 
- []
-
-LaTeX Font Info:    Trying to load font information for T5+pcr on input line 235.
-(C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5pcr.fd
-File: t5ucr.fd 2005/08/24 Fontinst v1.929 font definitions for T5/pcr.
-)
-Overfull \hbox (67.93512pt too wide) in paragraph at lines 239--254
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[25]
-Overfull \hbox (39.9721pt too wide) in paragraph at lines 261--278
- [][] 
- []
-
-! Undefined control sequence.
-l.286 ...cÃ¢u lá»‡nh \text{GGA}, \text{GNS}, \tett
-                                                  {RMC}, hoáº·c \text{VTG} Ä...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[27]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 309.
- (C:\Users\hienc\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[28{C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[29]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[33]
-Overfull \hbox (11.12462pt too wide) in paragraph at lines 475--476
-[]\T5/ptm/m/n/13 Trong ^^_ç ¡n, vi»c c§u h¼nh ch¸ ^^_ë Idle ^^_÷ñc thüc hi»n trong h m []
- []
-
-! Misplaced alignment tab character &.
-l.480         \item MCUCR &
-                           = ~(1 << SM1);
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.481         \item MCUCR &
-                           = ~(1 << SM0);
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[34]
-Overfull \hbox (16.11661pt too wide) in paragraph at lines 505--506
-[]\T5/ptm/m/n/13 Khi h» thèng khði ^^_ëng, h m [] c§u h¼nh c¡c ch¥n GPIO, []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[35]
-<Hinhve/State_machine.png, id=484, 532.99126pt x 522.95375pt>
-File: Hinhve/State_machine.png Graphic file (type png)
-<use Hinhve/State_machine.png>
-Package pdftex.def Info: Hinhve/State_machine.png  used on input line 523.
-(pdftex.def)             Requested size: 341.43437pt x 335.01642pt.
-)
-Underfull \vbox (badness 1412) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[36 <./Hinhve/State_machine.png>]
-Ch\uhorn \ohorn ng 5.
-(Chuong/5_Giai_phap_dong_gop.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37
-
-]
-Overfull \hbox (0.31174pt too wide) in paragraph at lines 44--45
-\T5/pcr/m/n/13 speed\T5/ptm/m/n/13 , \T5/pcr/m/n/13 gps_status\T5/ptm/m/n/13 , \T5/pcr/m/n/13 dis-tance\T5/ptm/m/n/13 , \T5/pcr/m/n/13 bat-tery_level \T5/ptm/m/n/13 v  \T5/pcr/m/n/13 is_charging\T5/ptm/m/n/13 .
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[38]
-Overfull \hbox (12.18079pt too wide) in paragraph at lines 45--46
-\T5/pcr/m/n/13 max_timeout\T5/ptm/m/n/13 , \T5/pcr/m/n/13 max_distance\T5/ptm/m/n/13 , \T5/pcr/m/n/13 is-Ge-ofenceEn-able\T5/ptm/m/n/13 , hay \T5/pcr/m/n/13 provinces\T5/ptm/m/n/13 ,
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[40])
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[41]
-Ch\uhorn \ohorn ng 6.
-(Chuong/6_Ket_luan.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42
-
-])
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 17.97902pt, for example:
-(fancyhdr)                \setlength{\headheight}{17.97902pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.97902pt}.
-
-[43]
-
-LaTeX Warning: Empty bibliography on input line 302.
-
-(Chuong/7_Luu_y_tai_lieu_tham_khao.tex) [44
-
-] (DoAn.aux)
+(Bia.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2002,27 +1264,24 @@ L3 programming layer <2024-01-04>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `DoAn.out' has not changed.
-(rerunfilecheck)             Checksum: 6198FDBE6D674C68DB64E3E4C49ED845;9468.
-Package logreq Info: Writing requests to 'DoAn.run.xml'.
-\openout1 = `DoAn.run.xml'.
+Package rerunfilecheck Info: File `Bia.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'Bia.run.xml'.
+\openout1 = `Bia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32796 strings out of 474486
- 616793 string characters out of 5743755
- 1959542 words of memory out of 5000000
- 54467 multiletter control sequences out of 15000+600000
- 592464 words of font info for 72 fonts, out of 8000000 for 9000
+ 32321 strings out of 474486
+ 607872 string characters out of 5743755
+ 1931542 words of memory out of 5000000
+ 54163 multiletter control sequences out of 15000+600000
+ 577588 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,107p,2545b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/ucrr8v.pfb><C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmb8v.pfb><C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmr8v.pfb><C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on DoAn.pdf (53 pages, 2195437 bytes).
+ 128i,12n,124p,2652b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmb8v.pfb><C:/Users/hienc/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmr8v.pfb>
+Output written on Bia.pdf (1 page, 47102 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 365 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
